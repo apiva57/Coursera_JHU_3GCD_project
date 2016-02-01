@@ -21,14 +21,14 @@ The goal of this project is to process data for Human Activity Recognition Using
 
 ### Initial prep:
 1. Set working directory into the folder where dataset was downloaded and unzipped. In my case it is: "/Users/anna/OneDrive/Coursera/JHU - Data Science/3. Getting and Cleaning Data/Course Project"
-2. Declare fuction that I will be using
+2. Declare functions that I will be using
 3. Load package dplyr
 
 ### Read data and validate dimensions
-1. Data is stored in two different forms: as a train set and test set.
-2. Each set has 3 files: subject data has only one column with subject Id, X file has bulk of the data, Y file has activit identificator.
-3. All 3 files for test/train should have the same number of rows. Subject and Y file for test/train should have only one column. Subject files for test and train should have the same number of columns. 
-4. After I loaded all files into the dataframe I verified that all conditions described in #3 are satisfied.
+1. Data are stored in two different forms: as a train set and test set.
+2. Each set has 3 files: subject data has only one column with subject Id, X file has bulk of the data, Y file has activity identification.
+3. All 3 files in test/train folder should have the same number of rows. Subject and Y file for test/train should have only one column. Subject files for test and train should have the same number of columns. 
+4. After I loaded all files into the data frame I verified that all conditions described in #3 are satisfied.
 
 ### Column names cleanup
 1. Give proper column names to the subject and activity data
@@ -37,12 +37,12 @@ The goal of this project is to process data for Human Activity Recognition Using
 
 ### Combine test, train, activity and subject data into one data frame
 1.  Drop non Mean and non Standard Deviation data from test and train data frames
-2.  Combine test/train data with activityId and subjectId by columns
+2.  Combine train data with activityId and subjectId by columns
 3.  Combine test data with activityId and subjectId by columns
 4.  Combine test and train data by rows.
 5.  Replace ActivityId with Activity Name for the entire data frame ( i.e. both train and test data )
 
 ### Create a tidy data set and write it to file
 1. Group data by subject Id and activity Name and calculate mean for each group
-2. Verfify dimensions all tidy data set
+2. Verify dimensions of tidy data set
 3. Write tidy data set into the file.
